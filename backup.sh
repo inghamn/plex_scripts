@@ -7,7 +7,7 @@ cd /etc
 tar -czv $BACKUP_DIR/jellyfin-conf.tar.gz jellyfin
  
 cd "/var/lib/plexmediaserver/Library/Application Support"
-tar -czf /srv/xanadu/backup/plex.tar.gz \
---exclude="./Plex Media Server/Logs" \
---exclude="./Plex Media Server/Cache" \
+tar -czvf $BACKUP_DIR/plex.tar.gz \
+--exclude="Plex Media Server/Logs" \
+--exclude="Plex Media Server/Cache" \
 "Plex Media Server"
